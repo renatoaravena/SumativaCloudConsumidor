@@ -12,7 +12,7 @@
 	<artifactId>SumativaCloudConsumidor</artifactId>
 	<version>1.0.0</version>
 	<name>Consumidor de Sumativa Cloud Native</name>
-	<description>Actividad Sumativa Cloud Native con Spring Boot, AWS y Github Actions</description>
+	<description>Actividad Sumativa Cloud Native con Spring Boot, AWS y Github Actions, Consumidor</description>
 	<url />
 	<licenses>
 		<license />
