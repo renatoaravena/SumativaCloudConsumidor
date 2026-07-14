@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.duoc</groupId>
-	<artifactId>SumativaConsumidor</artifactId>
+	<artifactId>SumativaCloudConsumidor</artifactId>
 	<version>1.0.0</version>
 	<name>Consumidor de Sumativa Cloud Native</name>
 	<description>Actividad Sumativa Cloud Native con Spring Boot, AWS y Github Actions</description>
