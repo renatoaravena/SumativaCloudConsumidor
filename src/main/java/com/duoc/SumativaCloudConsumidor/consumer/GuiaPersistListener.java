@@ -1,4 +1,5 @@
 package com.duoc.SumativaCloudConsumidor.consumer;
+import java.time.ZoneId;
 
 import com.duoc.SumativaCloudConsumidor.constants.RabbitConstants;
 import com.duoc.SumativaCloudConsumidor.dto.GuiaMessage;
@@ -37,7 +38,7 @@ public class GuiaPersistListener {
         try {
 
             String transportista = guia.getTransportista() != null ? guia.getTransportista() : "Sin_Transportista";
-            String fechaActual = LocalDate.now().format(DateTimeFormatter.ofPattern("ddMMyyyy"));
+            String fechaActual = LocalDate.now(ZoneId.of("America/Santiago")).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
             String idCorto = UUID.randomUUID().toString().substring(0, 8);
             String nombreArchivo = "guia_" + idCorto + ".pdf";
             
@@ -63,7 +64,7 @@ public class GuiaPersistListener {
             entidad.setDireccionDestino(guia.getDireccionDestino());
             entidad.setDescripcionCarga(guia.getDescripcionCarga());
             entidad.setPesoKg(guia.getPesoKg());
-            entidad.setFechaProcesado(LocalDateTime.now());
+            entidad.setFechaProcesado(LocalDateTime.now(ZoneId.of("America/Santiago")));
 
             repository.save(entidad);
             log.info("Guía persistida en H2 con id: {}", entidad.getId());
